@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <input name="srednia" value="1,2,5">
+    <button class="oblicz">Oblicz</button>
+    <h1></h1>
+    <h1 name="iloczyn"></h1>
+<script>
+    
+    let inputElement = document.querySelector('[name=srednia]')
+
+    document.querySelector('.oblicz').addEventListener("click", function() {
+        let numbers = inputElement.value.split(",")
+        
+        document.querySelector('[name="iloczyn"]').innerText = "Iloczyn: " + iloczyn(numbers)
+        document.querySelector('h1').innerText = "Średnia: " + average(numbers)
+    })
+
+    //[1,2,5]
+    function average(array) {
+        let sum = 0
+        for (let i=0 ; i < array.length ; i++){
+            sum += parseInt(array[i])
+        }
+        return sum / array.length
+    }
+
+    function iloczyn(array) {
+        let iloczyn = array[0]
+        for(let i=1; i<array.length ;i++){
+            iloczyn *= Number(array[i])
+
+        }
+        return iloczyn
+    }
+    /*
+    Input, do którego wposujesz tekst i po klikniecuiu ma ten tekst odwrócić
+    input -> Mar
+    output -> raM
+
+    let n = 4
+
+    ****
+    ****
+    ****
+    ****
+
+    *
+    **
+    ***
+    ****
+
+    ****
+    ***
+    **
+    *
+
+    */
+</script>
+</body>
+
+</html>
