@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //split, replace, join, substring, substr
+
+        //SPLIT STRING => ARRAY
+        //JOIN ARRAY => STRING
+        //REPLACE - zamienia litery
+        //SUBSTRING - wycina od (indeks) do (indeks)
+        //SUBSTR - wycina od, tyle ile chcesz
+        //Lenght - operacje na długośći stringa lub tablicy
+        //toUpperCase - funkcja która robi ci do dużej litery
+        let num = "1,2,5,10"
+        
+        //INPUT -> "1,2,5,10"
+        //OUTPUT -> [1,2,5,10]
+        num=num.split(',')
+        
+        for(let i=0; i<num.length;i++){
+            num[i] = Number(num[i])
+        }
+        console.log(num)
+
+        //Napisz funkcję która sprawdzi czy napis: „Hello” jest typem string, niech funkcje zwraca true lub false.
+        const abc = "asdadsads"
+        
+        function sprawdz(str){
+            if(typeof str == "string"){
+                return true
+            } else {
+                return false
+            }
+        }
+
+        console.log(sprawdz(abc))
+
+        //Napisz kod która sprawdzi czy przedostatni znak tekstu „Hello” jest literą „e”
+        let ab="Hello Woed"
+        let znak=  ab[ab.length - 2]
+        if(znak=="e"){
+            console.log("ok")
+        }else{
+            console.log("inna litera")
+        }
+
+        // Napisz kod która z podanego tekstu „Hello Words”, która zwróci tablicę słów.
+        // INPUT: „Hello Words”
+        // OUTPUT: [„Hello”, „Words”]
+        let tekst= "Hello Words"
+        tekst = tekst.split(" ")
+        console.log(tekst)
+        /*
+        1.
+        Napisz kod która z linków wycina 4 część linku tzn.
+        INPUT: „http://test.com/a/b/c/d”
+        OUTPUT:   “c”
+
+        2. Napisz kod która obrabia link:
+        INPUT: „http://test.com/a/b/c/d”
+        OUTPUT:   “test-a-b-c-d”
+        (Opcjonalne) Uwaga: Zauważ że w pierwszym członie „test.com” zawartość po kropce jest odcinana
+
+        3. Napisz kod której zadaniem jest  takie obrobienie linka:
+        INPUT: „http://test.com/a/b/c/d”
+        OUTPUT:   “Test.comABCD”
+
+        */
+    </script>
+    
+</body>
+</html>

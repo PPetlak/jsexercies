@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,63 +9,160 @@
     <style>
     </style>
 </head>
+
 <body>
     <input name="srednia" value="1,2,5">
     <button class="oblicz">Oblicz</button>
     <h1></h1>
     <h1 name="iloczyn"></h1>
-<script>
-    
-    let inputElement = document.querySelector('[name=srednia]')
+    <h1 name="iloczyn">Zadanie 1</h1>
+    <input class="exampleText" required name="exampleText" value="">
+    <h1 class="reverse"></h1>
 
-    document.querySelector('.oblicz').addEventListener("click", function() {
-        let numbers = inputElement.value.split(",")
-        
-        document.querySelector('[name="iloczyn"]').innerText = "Iloczyn: " + iloczyn(numbers)
-        document.querySelector('h1').innerText = "Średnia: " + average(numbers)
-    })
+    <script>
+        let inputElement = document.querySelector('[name=srednia]')
 
-    //[1,2,5]
-    function average(array) {
-        let sum = 0
-        for (let i=0 ; i < array.length ; i++){
-            sum += parseInt(array[i])
+        document.querySelector('.oblicz').addEventListener("click", function () {
+            let numbers = inputElement.value.split(",")
+
+            document.querySelector('[name="iloczyn"]').innerText = "Iloczyn: " + iloczyn(numbers)
+            document.querySelector('h1').innerText = "Średnia: " + average(numbers)
+        })
+
+        //[1,2,5]
+        function average(array) {
+            let sum = 0
+            for (let i = 0; i < array.length; i++) {
+                sum += parseInt(array[i])
+            }
+            return sum / array.length
         }
-        return sum / array.length
-    }
 
-    function iloczyn(array) {
-        let iloczyn = array[0]
-        for(let i=1; i<array.length ;i++){
-            iloczyn *= Number(array[i])
+        function iloczyn(array) {
+            let iloczyn = array[0]
+            for (let i = 1; i < array.length; i++) {
+                iloczyn *= Number(array[i])
 
+            }
+            return iloczyn
         }
-        return iloczyn
-    }
-    /*
+        /*
     Input, do którego wposujesz tekst i po klikniecuiu ma ten tekst odwrócić
     input -> Mar
     output -> raM
+*/
+        document.querySelector('[value=""]').addEventListener("click", function () {
 
-    let n = 4
+            let exampleText = document.querySelector(".exampleText").value
+            if (!exampleText) {
+                window.alert("Wpisz tekst!");
 
-    ****
-    ****
-    ****
-    ****
+            } else {
+                document.querySelector('.reverse').innerText = exampleText.split('').reverse().join('')
+            }
+        })
 
-    *
-    **
-    ***
-    ****
+        /*
+            let n = 4
 
-    ****
-    ***
-    **
-    *
+            ****
+            ****
+            ****
+            ****
 
-    */
-</script>
+            *
+            **
+            ***
+            ****
+
+            ****
+            ***
+            **
+            *
+
+            1
+            12
+            123
+            1234
+
+            
+
+            1234
+            123
+            12
+            1
+
+            */
+
+         n = 4;
+        gwiazdy = '';
+        for (let i = 0; i < n; i++) {
+            let gwiazdy = '';
+            for (let i = 0; i < 4; i++) {
+                gwiazdy = gwiazdy + "*"
+
+            }
+            console.log(gwiazdy);
+        }
+
+
+        n = 4
+        gwiazdy = ''
+        for (let i = 0; i < n; i++) {
+            for (let i = 0; i < 4; i++) {
+                gwiazdy = gwiazdy + "*"
+                console.log(gwiazdy)
+                break;
+            }
+        }
+        //zadanie 4
+
+        n = 4
+        n = n - 1
+        for (i = n; i >= 0; i--) {
+            let star = ""
+            for (j = 0; j <= i; j++) {
+                star += "*";
+            }
+            console.log(star)
+        }
+        n = 5
+        gwiazdy = ''
+        for (let i = 1; i < n; i++) {
+           gwiazdy = gwiazdy + i
+           console.log(gwiazdy)
+        }
+   
+      
+        const tab = ['1', '2', '3', '4'];
+
+
+        console.log("-----------------------")
+        n = 5
+        for (i = n; i > 0; i--) {
+            let star = ""
+            for (j = 1; j <= i; j++) {
+                star += j;
+            }
+            console.log(star)
+        }
+
+        /*
+
+        1234
+        1  4
+        1  4
+        1234
+
+        1 3 5
+         2 4
+        1 3 5
+         2 4
+        1 3 5
+
+        */
+
+    </script>
 </body>
 
 </html>
