@@ -62,17 +62,36 @@
         Napisz kod która z linków wycina 4 część linku tzn.
         INPUT: „http://test.com/a/b/c/d”
         OUTPUT:   “c”
+*/
+        let w = "http://test.com/a/b/c/d"
+             w=w.split("/")
+             console.log(w[5])
 
+/*
         2. Napisz kod która obrabia link:
         INPUT: „http://test.com/a/b/c/d”
         OUTPUT:   “test-a-b-c-d”
         (Opcjonalne) Uwaga: Zauważ że w pierwszym członie „test.com” zawartość po kropce jest odcinana
-
+*/
+            let d = "test.com/a/b/c/d"
+            d=d.split("/")
+            d= d.join('-')
+            d=d.replace(".com","")
+            
+           
+            console.log(d)
+/*
         3. Napisz kod której zadaniem jest  takie obrobienie linka:
         INPUT: „http://test.com/a/b/c/d”
         OUTPUT:   “Test.comABCD”
 
         */
+       let u = "test.com/a/b/c/d"
+       u= u.split("/")
+       u=u.join("")
+       u=u.replace("t","T")
+       u=u.replace("abcd","ABCD")
+       console.log(u)
     </script>
     
 </body>

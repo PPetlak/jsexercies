@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    [type=text] {
+        background: red;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <p>To jest element P który należy pobrać</p>
+    </div>
+    <h1 class="klasa">To jest element z klasą klasa</h1>
+    <h2 class="klasa">To jest element h2 z klasą klasa</h2>
+    <input type="text">
+    <input type="number">
+    <input type="number" name="age">
+    <div class="test">
+        <input type="text" name="surname">
+    </div>
+    <ul>
+        <li name="surname">To jest właściwy</li>
+        <li></li>
+    </ul>
+    <ul class="test">
+        <li name="surname">To jest właściwy</li>
+        <li></li>
+    </ul>
+
+    Ćwiczenie 1
+Pobierz element „div”
+    <script>
+    let elem = document.querySelector("div")
+    console.log(elem)
+    elem.style.background = "red"
+    </script>
+
+Ćwiczenie 2
+Pobierz element „p” znajdujący się w „div”.
+<script>
+    let elem2=document.querySelector("div p")
+    console.log(elem2)
+</script>
+
+Ćwiczenie 4
+Pobierze element, który posiada jednocześnie klasę o nazwie „klasa” oraz jest elementem „h2”
+<script>
+    let elem3= document.querySelector("h2.klasa")
+    console.log(elem3)
+</script>
+Ćwiczenie 5
+Pobierze element, który posiada atrybut o nazwie „type” z wartością „text”
+<script>
+    let elem4= document.querySelector("[type=text]")
+    console.log(elem4)
+</script>
+Ćwiczenie 7
+Pobierze element, który posiada atrybut o nazwie „type” z wartością „number” oraz atrybut „name” z wartością „age”
+<script>
+    let elem5 = document.querySelector("[type=number][name=age]")
+console.log(elem5)
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        Ćwiczenie 10
+        Napisz funkcję która jako parametr przyjmie 4 liczby i pomnoży je do siebie. Niech funkcja zwraca: „Wynik mnożenia to: ……..” i pomnoży te 4 liczby. Przetestuj ją dla wartości 12 i 3
+
+       
+
+        Ćwiczenie 12
+Napisz funkcję która przyjmuje 5 parametrów (wysokość, szerokość, długość, typ jednostek, typ jednostek wymaganych). Jej zadaniem jest obliczenie objętości oraz przekonwertowanie na odpowiedni typ jednotek wymaganych (metr sześcienny, kilometr sześcienny, decymetr sześcienny) – parametr piąty. Obecna jednostka która jest liczona to parametr czwarty (metr, kilometr, decymetr). Funkcja zwraca napis „Wynik objętości: ….  [typ jednostek wymaganych]”
+Przykład:
+(120,120,120, „m”,”km3”) → „Wynik objętości: 0,001728 [km3]”
+(1, 0. 4 , 0. 4, „km”,”m3”) → „Wynik objętości:  160000000 [m3]”
+<script>
+     function exc10(a,b,c,d){
+            let iloczyn = a*b*c*d
+            return ("Wynik mnożenia to:"+ iloczyn)
+        }
+        console.log(exc10(1,2,4,5))
+
+let a,b,c
+let jednostkaMiary =["m","km","dm"]
+let  docelowaMiara = ["m3","km3", "dm3"]
+
+
+
+function exc12(a,b,c,jednostkaMiary, docelowaMiara){
+    let iloczyn = a*b*c
+    if(docelowaMiara === "m3" && jednostkaMiary === "m"){
+    console.log(iloczyn)
+}else  if(docelowaMiara === "km3" && jednostkaMiary === "m"){
+    console.log(iloczyn*1000)
+}
+
+ }
+ console.log(exc12(2,3,4,"m","km3"))
+
+
+
+
+
+</script>
+</body>
+</html>

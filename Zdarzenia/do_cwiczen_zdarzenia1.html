@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+      <button>Witaj</button>
+      <h1 class="header">To jest tekst</h1>
+      <h2>Zmiana koloru tła</h2>
+      <h4 sets="atrybut do usuniecia">Usuwanie atrybutu</h4>
+      <button>Ddd</button>
+      <div class="dodanie"></div>
+      <p>Jesli kliniesz to będziesz dopisywał</p>
+      Ćwiczenie (do_cwiczen_zdarzenia_1.html)
+Po naciśnięciu przycisku “Witaj”, element “h1” z klasą “header” powinien zmienić kolor tła na czerwony.
+        <button class="counter-button">Add</button>
+        <p class="counter">0</p>
+      <script>
+          let butt = document.querySelector("button")
+butt.addEventListener("click", function(){
+    let elem= document.querySelector("h1.header")
+    elem.style.backgroundColor= "red"
+})
+
+// Ćwiczenie (do_cwiczen_zdarzenia_1.html)
+// Po podwójnym naciśnięciu elementu “h2”, kolor tła tego elementu powinien się zmienić na czerwony
+let elem2 = document.querySelector("h2")
+elem2.addEventListener("dblclick", function(){
+    this.style.backgroundColor = "red"
+})
+
+// Ćwiczenie (do_cwiczen_zdarzenia_1.html)
+// Po naciśnięciu elementu “h4”, dodaj mu klasę .black i usuń z niego atrybut “sets”.
+let elem3 = document.querySelector("h4")
+elem3.addEventListener("click", function(){
+    this.classList.add("black")
+    this.removeAttribute("sets")
+})
+
+// Ćwiczenie (do_cwiczen_zdarzenia_1.html)
+// Po naciśnięciu elementu “h2” w konsoli wyświetl tekst, który jest w nim zawarty.
+
+document.querySelector("h2").addEventListener("click", function(){
+    console.log(this.innerText)
+})
+
+// Ćwiczenie (do_cwiczen_zdarzenia_1.html)
+// Po naciśnięciu przycisku “Ddd” przypisz do elementu z klasą “.dodanie” tekst: “To jest ten tekst”
+
+document.querySelector("button").addEventListener("click", function(){
+    document.querySelector(".dodanie").innerHTML="To jest ten tekst"
+})
+// Ćwiczenie (do_cwiczen_zdarzenia_1.html)
+// Za każdym razem jak klikasz na element “p”, dopisuj do niego tekst: “-dodano” (dopisuj, nie zastępuj !!!)
+
+let elem4=document.querySelector("p").addEventListener("click", function(){
+    this.innerText+="-dodano"
+})
+
+
+
+
+      
+      </script>
+      // Ćwiczenie (do_cwiczen_zdarzenia_1.html)
+      // Twoim zadaniem jest zrobienie countera, za każdym razem jak naciskasz w przycisk “Add”, musisz zwiększać o jeden wartość w elemencie “p” z klasą “counter”.
+      <script>
+      let numb = document.querySelector(".counter")
+      count = 0;
+      document.querySelector(".counter-button").addEventListener("click", function(){
+        count+=1
+        numb.innerHTML = count
+      })
+      
+
+      
+      </script>
+  </body>
+</html>

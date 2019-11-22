@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Ćwiczenie 4
+Stwórz pętle która wypisze w konsoli liczby od 5 do 25 podzielne przez 3
+
+ <script>
+ for(let i=5; i<=25; i++){
+    if(i%3 == 0){
+        console.log(i)
+    }
+ }
+ </script>
+
+Ćwiczenie 5
+Stwórz pętle która wypisze w konsoli liczby od 10 do 125 podzielne przez 5
+<script>
+for(let i=10; i<=125; i++){
+    if(i%5==0){
+        console.log(i)
+    }
+}
+
+for(let i=10; i<=125; i++){
+    if(i%5==0 && i%3==0){
+        console.log(i)
+    }
+}
+
+</script>
+Ćwiczenie 6
+Stwórz pętle która wypisze w konsoli liczby od 10 do 125 podzielne przez 3 i 5
+Ćwiczenie 6
+Napisz funkcję która jako parametr przyjmie tablicę liczb. Jej zadaniem jest policzenie sumy tych liczb. W konsoli wypisz: „Suma to: ……..”
+
+Ćwiczenie 7
+Napisz funkcję która jako parametr przyjmie tablicę liczb. Jej zadaniem jest policzenie iloczynu tych liczb. W konsoli wypisz „Iloczyn to: ……..”
+
+<script>
+    function iloczyn(arr){
+        let iloczyn =1
+        for(let i=0;i<arr.length; i++){
+            iloczyn*=arr[i]
+        }
+        console.log(iloczyn)
+    }
+    iloczyn([2,4,6])
+</script>
+<script>
+    function suma(arr){
+        let sum = 0;
+        for(let i =0; i<arr.length ; i++){
+            sum=sum+arr[i]
+        }
+        console.log(sum)
+    }
+    suma([2,5,34])
+</script>
+Ćwiczenie 8
+Napisz funkcję która przyjmie 2 parametry, pierwszym z nich jest tablica liczb 1,2,15,25,15  drugim z parametrów jest dowolna liczba np. 2. Zadaniem tej funkcji w tym wypadku jest zsumowanie wartości w tablicy, które są podzielne przez 2.
+<script>
+    function cw8(arr,b){
+        let sum = 0;
+        for(let i=0; i<arr.length;i++){
+            if(arr[i]%b ==0){
+                sum+=arr[i]
+            }
+           
+        }
+        console.log(sum)
+    }
+    cw8([2,4,3],2)
+</script>
+Ćwiczenie 9
+Napisz funkcję która jako parametr przyjmie 2 liczby i doda je do siebie. Niech funkcja zwraca: „Wynik dodawania to: ……..” i doda te 2 liczby. Przetestuj ją dla wartości 10 i 2
+<script>
+    function cw9(a,b){
+        
+        let sum = a+b;
+        return "wynik dodawania to" +sum
+    }
+    console.log(cw9(10,2))
+
+</script>
+</body>
+</html>
