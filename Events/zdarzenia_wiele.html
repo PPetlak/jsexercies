@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+    div {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+    }
+    </style>
+  </head>
+  <body>
+      <p>To jest tekst 1</p>
+      <p>To jest tekst 2</p>
+      <p>To jest tekst 3</p>
+      <p>To jest tekst 4</p>
+      <div></div>
+      <ul>
+          <li>To jest element listy, który może być usuwany</li>
+          <li>To jest element listy, który może być usuwany</li>
+          <li>To jest element listy, który może być usuwany</li>
+          <li>To jest element listy, który może być usuwany</li>
+      </ul>
+      <div></div>
+      <div></div>
+      <div></div>
+      Ćwiczenie (zdarzenia_wiele.html)
+Nałóż zdarzenie click na wszystkie elementy “p”. Za każdym razem jak klikany jest element “p” to w konsoli wyświetla się tekst, który element w środku zawiera.
+      <script>
+      let pElements =  document.querySelectorAll("p")
+      for(let i =0; i<pElements.length; i++){
+        pElements[i].addEventListener("click", function(){
+            console.log(pElements[i].innerText)
+})
+      }
+     
+      </script>
+      Ćwiczenie (zdarzenia_wiele.html)
+      Nałóż zdarzenie najechania myszą na wszystkie elementy “div”. Po najechaniu na dany element tło tego diva zmienia się na czerwony. A po jego opuszczeniu tło diva, znów staje się przezroczyste.
+  </body>
+</html>

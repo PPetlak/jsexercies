@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .elem12{
+        width:50px;
+        height: 50px;
+        background-color: yellow;
+    }
+</style>
+<body>
+    
+        <button class="red">red</button>
+        <button class="blue">blue</button>
+        <button class="yellow">yellow</button>
+        <button class="black">black</button>
+        <button class="abc">Abc</button>
+        <div class="elem12"></div>
+        
+        Ćwiczenie
+        Do strony dodaj 4 przyciski, każdy z nich zmienia kolor całej strony na inny.
+        Jeden na czerwony, drugi na niebieski, trzecie na żółty, a czwarty na czarny.<br>
+<script>
+    let red = document.querySelector(".red")
+    let blue = document.querySelector(".blue")
+    let yellow = document.querySelector(".yellow")
+    let black = document.querySelector(".black")
+    let body = document.querySelector("body")
+
+    red.addEventListener("click", function(){
+        body.style.backgroundColor = "red"
+    })
+    blue.addEventListener("click", function(){
+        body.style.backgroundColor = "blue"
+    })
+    yellow.addEventListener("click", function(){
+        body.style.backgroundColor = "yellow"
+    })
+    black.addEventListener("click", function(){
+        body.style.backgroundColor = "black"
+    })
+</script>
+Ćwiczenie
+Do strony dodaj przycisk “Abc”.
+Po naciśnięciu przycisku „Abc”, kolor tła całej strony zmienia się raz na czerwony, raz na różowy
+
+<script>
+    let abc = document.querySelector(".abc")
+    let color = "red"
+    abc.addEventListener("click", function(){
+        console.log(color)
+        if (color==="red") {
+            body.style.backgroundColor = "pink"
+            color = "pink"
+        }
+        else{
+            body.style.backgroundColor = "red"
+            color = "red"
+        }
+        
+    })
+</script>
+Ćwiczenie
+Do strony dodaj div, i daj mu szerokość i wysokość po 50px oraz background color - red. Następnie po najechaniu myszką na diva element rozszerza się do 150px (wysokość oraz szerokość).Po wyjechaniu myszką z diva element wraca szerokością oraz wysokością do 50px.
+<script>
+    let elem12= document.querySelector(".elem12")
+    elem12.addEventListener("mouseenter", function(){
+        elem12.style.width = "150px"
+        elem12.style.height = "150px"
+    })
+    elem12.addEventListener("mouseleave", function(){
+        elem12.style.width = "50px"
+        elem12.style.height = "50px"
+    })
+</script>
+Ćwiczenie
+DO strony dodaj przycisk „Waliduj” oraz inputa. Po naciśnięciu przycisku „Waliduj” skrypt sprawdza czy tekst w inpucie ma więcej niż 5 liter. Jeśli tak to koloruje inputa na zielona, jeśli nie to koloruje inputa na czerwono.
+<button class="walidacja">Waliduj</button>
+<input>
+
+<script>
+    let waliduj = document.querySelector(".walidacja")
+    let tekst = document.querySelector("input")
+    waliduj.addEventListener("click", function(){
+        if(tekst.value.length >5){
+            tekst.style.backgroundColor = "green"
+        }else{
+            tekst.style.backgroundColor = "red"
+        }
+    })
+</script>
+Ćwiczenie
+DO strony dodaj przycisk „Waliduj” oraz inputa. Po naciśnięciu przycisku „Waliduj” skrypt sprawdza czy tekst w inpucie jest liczbą. Jeśli tak to koloruje inputa na zielona, jeśli nie to koloruje inputa na czerwono.
+<button class="walidacja2">Waliduj</button>
+<input class="walidacja2">
+
+<script>
+    let waliduj2 = document.querySelector(".walidacja2")
+    let tekst2 = document.querySelector("input.walidacja2")
+    waliduj2.addEventListener("click", function(){
+        if(isNaN(tekst2.value) === false){
+            tekst2.style.backgroundColor = "green"
+        }else{
+            tekst2.style.backgroundColor = "red"
+        }
+    })
+</script>
+</body>
+</html>

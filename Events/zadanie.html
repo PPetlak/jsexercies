@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        Zadanie
+        Napisz skrypt, którego zadaniem jest obliczanie procentu jaki użytkownik chce pozyskać z danej liczby(2 inputy). Np. Jeśli chce uzyskać 10% z liczby 120 (obie liczby wpisuje do inputa) to skrypt wyświetli mu 12. Jeśli użytkownik poda wartość procentową mniejszą niż 0 to input koloruje się na czerwono, a tekst pod spodem inputa powinien pokazać informacje: „Wartość procentowa mniejsza niż 0”. Jeśli użytkownik poda liczbę mniejszą niz 0 to input koloruje się na czerwono, a tekst pod spodem inputa powinien pokazać informacje: „Wartość liczbowa mniejsza niż 0”.
+        <button class="policz">policz</button>
+        <input class="liczba">
+        <input class ="procent">
+        <div class="wynik"></div>
+
+        <script>
+            let policz =document.querySelector(".policz")
+            let liczba =document.querySelector(".liczba")
+            let procent =document.querySelector(".procent")
+            let wynik =document.querySelector(".wynik")
+
+            policz.addEventListener("click" , function(){
+                let a = Number(procent.value)
+                let b = Number(liczba.value)
+                   
+                if(a<0){
+                    procent.style.backgroundColor = "red"
+                    wynik.innerText ="Wartość procentowa mniejsza niż 0"
+                } else if(b<0){
+                    liczba.style.backgroundColor = "red"
+                    wynik.innerText ="Wartość procentowa mniejsza niż 0"
+                } else {
+                    wynik.innerText =  a/100 *b
+                    procent.style.backgroundColor= "white"
+                    liczba.style.backgroundColor= "white"
+                }
+                
+
+            })
+        </script>
+</body>
+</html>

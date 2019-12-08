@@ -24,22 +24,36 @@ Przykład:
         }
         console.log(exc10(1,2,4,5))
 
+//cwiczenie 12
+
 let a,b,c
 let jednostkaMiary =["m","km","dm"]
 let  docelowaMiara = ["m3","km3", "dm3"]
 
-
-
 function exc12(a,b,c,jednostkaMiary, docelowaMiara){
     let iloczyn = a*b*c
-    if(docelowaMiara === "m3" && jednostkaMiary === "m"){
-    console.log(iloczyn)
-}else  if(docelowaMiara === "km3" && jednostkaMiary === "m"){
-    console.log(iloczyn*1000)
+    if( jednostkaMiary === "m" &&docelowaMiara === "m3"){
+    return iloczyn + " [m3]"
+}else  if(  jednostkaMiary === "m" &&docelowaMiara === "km3"){
+    return iloczyn/10000000 + " [km3]"
+}else  if(  jednostkaMiary === "m" &&docelowaMiara === "dm3"){
+    return iloczyn*0,001 + " [dm3]"
+}else  if(  jednostkaMiary === "km" &&docelowaMiara === "m3"){
+    return iloczyn/10 + " [m3]"
+}else  if(  jednostkaMiary === "km" &&docelowaMiara === "km3"){
+    return iloczyn/10 + " [km3]"
+}else  if(  jednostkaMiary === "km" &&docelowaMiara === "dm3"){
+    return iloczyn/10 + " [dm3]"
+}else  if(  jednostkaMiary === "dm" &&docelowaMiara === "m3"){
+    return iloczyn/10 + " [m3]"
+}else  if(  jednostkaMiary === "dm" &&docelowaMiara === "km3"){
+    return iloczyn/10 + " [km3]"
+}else  if(  jednostkaMiary === "dm" &&docelowaMiara === "dm3"){
+    return iloczyn/10 + " [dm3]"
 }
 
  }
- console.log(exc12(2,3,4,"m","km3"))
+ console.log("Wynik objetości to: " + exc12(120,120,120,"dm","km3"))
 
 
 

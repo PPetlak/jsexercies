@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    
+        Ćwiczenie
+        Do strony dodaj przycisk “Klik”, następnie po jego naciśnięciu przycisku w konsoli pokaże się napis “Kliknięto”.<br>
+        <button class="klik">Klik</button> <br>
+
+        <script>
+            let klik = document.querySelector(".klik")
+            klik.addEventListener("click", function(){
+                console.log("Kliknięto")
+            })
+        </script>
+
+        Ćwiczenie
+Na stronę dodaj przycisk z napisem “Zmień”, pod wpływem którego tło całej strony zmienia się na - “#454545”, a kolor tekstu na całej stronie na - “white”
+<br>
+<button class="zmien">Zmień</button><br>
+<script>
+    let zmien = document.querySelector(".zmien")
+    let body = document.querySelector("body")
+        zmien.addEventListener("click", function(){
+            body.style.backgroundColor= "#454545"
+            body.style.color = "white"
+        })
+    
+</script>
+
+Ćwiczenie
+Do strony dodaj przycisk “Witaj”, po którego naciśnięciu zostanie do niego dodany atrybut “disabled” z wartością “true”.
+<button class="witaj">Witaj</button>
+<br>
+<script>
+    let witaj = document.querySelector(".witaj")
+    witaj.addEventListener("click" , function(){
+        witaj.setAttribute("diabled", "true")
+    })
+</script>
+
+
+Ćwiczenie
+Do strony dodaj przycisk, oraz element “h1” z napisem “Jest to warte zachodu”, następnie po naciśnięciu przycisku pobierz tekst z elementu “h1” i wyświetl go w konsoli.
+<button class="pobierz">Pobierz tekst</button>
+<h1>Jest to warte zachodu</h1>
+<br>
+<script>
+    let pobierz = document.querySelector(".pobierz")
+    let tekstH1 =document.querySelector("h1")
+    pobierz.addEventListener("click",  function(){
+        let pobrany = tekstH1.innerHTML
+        console.log(pobrany)
+    })
+</script>
+Ćwiczenie
+Do strony dodaj poniższą strukturę:
+<div>
+	<p>Element p</p>
+	<p>Element p2</p>
+</div>
+Po naciśnięciu elementu p, wypisz w konsoli jego tekst.
+<br>
+<script>
+    let pElements = document.querySelectorAll("p")
+
+    for(let i =0;i<pElements.length; i++){
+        pElements[i].addEventListener("click", function(){
+            console.log(pElements[i].innerHTML)
+        })
+    }
+
+    
+</script>
+
+</body>
+</html>

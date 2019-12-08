@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click</button>
+    <button>Click 2</button>
+    <p>Pracuj</p>
+    <p>Pracuj</p>
+    <p>Pracuj</p>
+    <p>Pracuj</p>
+    <p>Pracuj</p>
+    <script>
+    let btn = document.querySelector("button")
+    // btn.onclick = function() {
+    //     console.log("asd")
+    // }
+    btn.addEventListener("click", function() {
+        console.log("asd")
+    })
+    //
+    // btn.addEventListener("click", function() {
+    //     console.log("bgf")
+    // })
+    btn.addEventListener("dblclick", function() {
+        console.log("podwójne")
+        //css ->
+        //text ->
+        
+    })
+    let p = document.querySelector("p")
+    let pElements = document.querySelectorAll("p") //to jest tablica elementów HTML-a, kilka querySelectorów
+    console.log(p, pElements)
+    for(let i = 0; i < pElements.length; i++) {
+        pElements[i].style.color = "green"
+        pElements[i].addEventListener("click", function() {
+            pElements[i].style.backgroundColor = "red"
+        })
+    }
+    </script>
+</body>
+</html>
